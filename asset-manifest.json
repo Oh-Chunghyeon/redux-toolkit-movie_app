@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/redux-toolkit-movie_app/static/css/main.0ec8a1b5.css",
+    "main.js": "/redux-toolkit-movie_app/static/js/main.95cc88e6.js",
+    "static/media/user.png": "/redux-toolkit-movie_app/static/media/user.109eb92014ac0b55efdf.png",
+    "index.html": "/redux-toolkit-movie_app/index.html",
+    "main.0ec8a1b5.css.map": "/redux-toolkit-movie_app/static/css/main.0ec8a1b5.css.map",
+    "main.95cc88e6.js.map": "/redux-toolkit-movie_app/static/js/main.95cc88e6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ec8a1b5.css",
+    "static/js/main.95cc88e6.js"
+  ]
+}
