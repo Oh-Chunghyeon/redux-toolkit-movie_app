@@ -8,11 +8,13 @@ import {
 
 const Home = () => {
   const dispatch = useDispatch();
+  const movieText = "miracle";
+  const seriesText = "criminal";
 
   useEffect(() => {
-    // 비동기로 api 호출하여 리스트들 store state에 주입
-    dispatch(fetchAsyncMovies());
-    dispatch(fetchAsyncSeries());
+    // 처음 접속시, 비동기로 api 호출하여 리스트들 store state에 주입해 list 노출
+    dispatch(fetchAsyncMovies(movieText));
+    dispatch(fetchAsyncSeries(seriesText));
   }, [dispatch]);
 
   return (

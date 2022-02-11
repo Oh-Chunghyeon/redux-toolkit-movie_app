@@ -8,30 +8,33 @@ import { APIKEY } from "../../api/MovieApiKey";
 
 // const APIKEY = process.env.REACT_APP__API_KEY;
 
+// Movie list API
 export const fetchAsyncMovies = createAsyncThunk(
   "playlist/fetchAsyncMovies",
-  async () => {
-    const movieText = "miracle";
+  async (searchValue) => {
+    // const movieText = "miracle";
     const response = await MovieApi.get(
-      `?apiKey=${APIKEY}&s=${movieText}&type=movie`
+      `?apiKey=${APIKEY}&s=${searchValue}&type=movie`
     );
 
     return response.data;
   }
 );
 
+// Series list APi
 export const fetchAsyncSeries = createAsyncThunk(
   "playlist/fetchAsyncSeries",
-  async () => {
-    const seriesText = "criminal";
+  async (searchValue) => {
+    // const seriesText = "criminal";
     const response = await MovieApi.get(
-      `?apiKey=${APIKEY}&s=${seriesText}&type=series`
+      `?apiKey=${APIKEY}&s=${searchValue}&type=series`
     );
 
     return response.data;
   }
 );
 
+// 비디오 detail api
 export const fetchAsyncMovieOrShowDetail = createAsyncThunk(
   "playlist/fetchAsyncMovieOrShowDetail",
   async (id) => {
@@ -57,7 +60,6 @@ const movieListSlice = createSlice({
   reducers: {
     // 내부 actions
     addShows: (state, { payload }) => {
-      console.log(payload);
       state.movies = payload;
     },
 
@@ -69,9 +71,9 @@ const movieListSlice = createSlice({
   //  ========  외부액션 ? 비동기로 작업해야 할 것들을 여기다가 ?  ========
 
   extraReducers: {
-    // [fetchAsyncMovies.pending]: () => {
-    //   console.log("Pending");
-    // },
+    [fetchAsyncMovies.pending]: () => {
+      console.log("Pending");
+    },
 
     // 각 action
     [fetchAsyncMovies.fulfilled]: (state, { payload }) => {

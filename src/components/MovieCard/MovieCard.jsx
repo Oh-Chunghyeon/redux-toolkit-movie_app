@@ -4,9 +4,10 @@ import "./movieCard.scss";
 
 const MovieCard = ({ show }) => {
   // console.log(show);
+
   return (
-    <Link to={`/movie/${show.imdbID}`}>
-      <li className="movie-card">
+    <li className="movie-card">
+      <Link to={`/movie/${show.imdbID}`}>
         <div className="card-inner">
           <div className="movie-top">
             <img src={show.Poster} alt={`${show.Title} 이미지`} />
@@ -16,8 +17,8 @@ const MovieCard = ({ show }) => {
             <p className="movie-year">{show.Year}</p>
           </div>
         </div>
-      </li>
-    </Link>
+      </Link>
+    </li>
   );
 };
 

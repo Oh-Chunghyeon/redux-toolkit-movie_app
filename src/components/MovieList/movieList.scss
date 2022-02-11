@@ -8,12 +8,12 @@
   }
 }
 
-.movies-list,
-.series-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-gap: 15px;
-}
+// .movies-list,
+// .series-list {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+//   grid-gap: 15px;
+// }
 
 .show-container {
   margin: 40px 0;

@@ -2,13 +2,15 @@
 
 .movie-card {
   padding: 4px;
-  // text-align: center;
-  cursor: pointer;
+  transition: 0.3s all;
   background: $secondary-color;
+  cursor: pointer;
+  min-height: 450px;
+  height: 100%;
+  margin: 10px;
 
   &:hover {
     transform: scale(1.1);
-    transition: 0.3s all;
   }
 }
 
